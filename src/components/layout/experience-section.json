@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_layout_experience_sections",
+  "info": {
+    "displayName": "Experience Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "job": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.job"
+    }
+  }
+}
