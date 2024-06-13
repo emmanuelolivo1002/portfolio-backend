@@ -4,6 +4,7 @@ export interface ComponentsJob extends Schema.Component {
   collectionName: 'components_components_jobs';
   info: {
     displayName: 'Job';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
@@ -12,6 +13,7 @@ export interface ComponentsJob extends Schema.Component {
     description: Attribute.Text;
     startDate: Attribute.Date;
     endDate: Attribute.Date;
+    detailedDescription: Attribute.Blocks;
   };
 }
 
