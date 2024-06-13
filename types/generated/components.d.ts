@@ -21,11 +21,14 @@ export interface ComponentsLink extends Schema.Component {
   collectionName: 'components_components_links';
   info: {
     displayName: 'Link';
+    description: '';
   };
   attributes: {
     url: Attribute.String;
     label: Attribute.String;
-    isExternal: Attribute.Boolean & Attribute.DefaultTo<false>;
+    type: Attribute.Enumeration<['internal', 'external', 'file']> &
+      Attribute.Required &
+      Attribute.DefaultTo<'internal'>;
   };
 }
 
