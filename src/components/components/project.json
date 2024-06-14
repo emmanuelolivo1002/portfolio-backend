@@ -46,6 +46,12 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::technology.technology"
+    },
+    "linkToView": {
+      "type": "string"
+    },
+    "linkToCode": {
+      "type": "string"
     }
   }
 }

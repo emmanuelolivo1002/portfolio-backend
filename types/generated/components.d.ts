@@ -54,6 +54,8 @@ export interface ComponentsProject extends Schema.Component {
       'oneToMany',
       'api::technology.technology'
     >;
+    linkToView: Attribute.String;
+    linkToCode: Attribute.String;
   };
 }
 
