@@ -32,6 +32,31 @@ export interface ComponentsLink extends Schema.Component {
   };
 }
 
+export interface ComponentsProject extends Schema.Component {
+  collectionName: 'components_components_projects';
+  info: {
+    displayName: 'Project';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    shortDescription: Attribute.Text;
+    detailedDescription: Attribute.Blocks;
+    thumbnail: Attribute.Media;
+    images: Attribute.Media;
+    project_categories: Attribute.Relation<
+      'components.project',
+      'oneToMany',
+      'api::project-category.project-category'
+    >;
+    technologies: Attribute.Relation<
+      'components.project',
+      'oneToMany',
+      'api::technology.technology'
+    >;
+  };
+}
+
 export interface LayoutExperienceSection extends Schema.Component {
   collectionName: 'components_layout_experience_sections';
   info: {
@@ -69,14 +94,28 @@ export interface LayoutHeroSection extends Schema.Component {
   };
 }
 
+export interface LayoutProjectsSection extends Schema.Component {
+  collectionName: 'components_layout_projects_sections';
+  info: {
+    displayName: 'Projects Section';
+  };
+  attributes: {
+    title: Attribute.String;
+    subtitle: Attribute.Text;
+    project: Attribute.Component<'components.project', true>;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'components.job': ComponentsJob;
       'components.link': ComponentsLink;
+      'components.project': ComponentsProject;
       'layout.experience-section': LayoutExperienceSection;
       'layout.header': LayoutHeader;
       'layout.hero-section': LayoutHeroSection;
+      'layout.projects-section': LayoutProjectsSection;
     }
   }
 }

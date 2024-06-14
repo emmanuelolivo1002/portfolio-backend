@@ -22,7 +22,8 @@
       "type": "dynamiczone",
       "components": [
         "layout.hero-section",
-        "layout.experience-section"
+        "layout.experience-section",
+        "layout.projects-section"
       ]
     }
   }

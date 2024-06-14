@@ -1,0 +1,51 @@
+{
+  "collectionName": "components_components_projects",
+  "info": {
+    "displayName": "Project",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "shortDescription": {
+      "type": "text"
+    },
+    "detailedDescription": {
+      "type": "blocks"
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "project_categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project-category.project-category"
+    },
+    "technologies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::technology.technology"
+    }
+  }
+}

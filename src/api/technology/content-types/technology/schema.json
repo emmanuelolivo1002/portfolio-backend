@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "technologies",
+  "info": {
+    "singularName": "technology",
+    "pluralName": "technologies",
+    "displayName": "Technology",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "iconKey": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "label": {
+      "type": "string"
+    }
+  }
+}
