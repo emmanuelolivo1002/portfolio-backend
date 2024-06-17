@@ -32,33 +32,6 @@ export interface ComponentsLink extends Schema.Component {
   };
 }
 
-export interface ComponentsProject extends Schema.Component {
-  collectionName: 'components_components_projects';
-  info: {
-    displayName: 'Project';
-    description: '';
-  };
-  attributes: {
-    title: Attribute.String;
-    shortDescription: Attribute.Text;
-    detailedDescription: Attribute.Blocks;
-    thumbnail: Attribute.Media;
-    images: Attribute.Media;
-    project_categories: Attribute.Relation<
-      'components.project',
-      'oneToMany',
-      'api::project-category.project-category'
-    >;
-    technologies: Attribute.Relation<
-      'components.project',
-      'oneToMany',
-      'api::technology.technology'
-    >;
-    linkToView: Attribute.String;
-    linkToCode: Attribute.String;
-  };
-}
-
 export interface LayoutExperienceSection extends Schema.Component {
   collectionName: 'components_layout_experience_sections';
   info: {
@@ -100,11 +73,16 @@ export interface LayoutProjectsSection extends Schema.Component {
   collectionName: 'components_layout_projects_sections';
   info: {
     displayName: 'Projects Section';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     subtitle: Attribute.Text;
-    project: Attribute.Component<'components.project', true>;
+    projects: Attribute.Relation<
+      'layout.projects-section',
+      'oneToMany',
+      'api::project.project'
+    >;
   };
 }
 
@@ -113,7 +91,6 @@ declare module '@strapi/types' {
     export interface Components {
       'components.job': ComponentsJob;
       'components.link': ComponentsLink;
-      'components.project': ComponentsProject;
       'layout.experience-section': LayoutExperienceSection;
       'layout.header': LayoutHeader;
       'layout.hero-section': LayoutHeroSection;

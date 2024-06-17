@@ -1,10 +1,16 @@
 {
-  "collectionName": "components_components_projects",
+  "kind": "collectionType",
+  "collectionName": "projects",
   "info": {
+    "singularName": "project",
+    "pluralName": "projects",
     "displayName": "Project",
     "description": ""
   },
-  "options": {},
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
   "attributes": {
     "title": {
       "type": "string"
@@ -14,6 +20,12 @@
     },
     "detailedDescription": {
       "type": "blocks"
+    },
+    "linkToView": {
+      "type": "string"
+    },
+    "linkToCode": {
+      "type": "string"
     },
     "thumbnail": {
       "type": "media",
@@ -46,12 +58,6 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::technology.technology"
-    },
-    "linkToView": {
-      "type": "string"
-    },
-    "linkToCode": {
-      "type": "string"
     }
   }
 }
