@@ -837,7 +837,8 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
       [
         'layout.hero-section',
         'layout.experience-section',
-        'layout.projects-section'
+        'layout.projects-section',
+        'layout.about'
       ]
     >;
     createdAt: Attribute.DateTime;
