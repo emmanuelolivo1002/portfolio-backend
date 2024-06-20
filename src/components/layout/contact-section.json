@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_layout_contact_sections",
+  "info": {
+    "displayName": "Contact Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "socialLinks": {
+      "type": "json"
+    }
+  }
+}

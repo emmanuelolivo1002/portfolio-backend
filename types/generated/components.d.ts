@@ -45,6 +45,19 @@ export interface LayoutAbout extends Schema.Component {
   };
 }
 
+export interface LayoutContactSection extends Schema.Component {
+  collectionName: 'components_layout_contact_sections';
+  info: {
+    displayName: 'Contact Section';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    subtitle: Attribute.Text;
+    socialLinks: Attribute.JSON;
+  };
+}
+
 export interface LayoutExperienceSection extends Schema.Component {
   collectionName: 'components_layout_experience_sections';
   info: {
@@ -105,6 +118,7 @@ declare module '@strapi/types' {
       'components.job': ComponentsJob;
       'components.link': ComponentsLink;
       'layout.about': LayoutAbout;
+      'layout.contact-section': LayoutContactSection;
       'layout.experience-section': LayoutExperienceSection;
       'layout.header': LayoutHeader;
       'layout.hero-section': LayoutHeroSection;
