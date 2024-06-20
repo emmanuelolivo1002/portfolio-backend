@@ -71,6 +71,16 @@ export interface LayoutExperienceSection extends Schema.Component {
   };
 }
 
+export interface LayoutFooter extends Schema.Component {
+  collectionName: 'components_layout_footers';
+  info: {
+    displayName: 'Footer';
+  };
+  attributes: {
+    linkToSource: Attribute.String;
+  };
+}
+
 export interface LayoutHeader extends Schema.Component {
   collectionName: 'components_layout_headers';
   info: {
@@ -120,6 +130,7 @@ declare module '@strapi/types' {
       'layout.about': LayoutAbout;
       'layout.contact-section': LayoutContactSection;
       'layout.experience-section': LayoutExperienceSection;
+      'layout.footer': LayoutFooter;
       'layout.header': LayoutHeader;
       'layout.hero-section': LayoutHeroSection;
       'layout.projects-section': LayoutProjectsSection;
