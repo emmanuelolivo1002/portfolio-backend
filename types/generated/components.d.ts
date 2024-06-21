@@ -40,8 +40,8 @@ export interface LayoutAbout extends Schema.Component {
   };
   attributes: {
     title: Attribute.String;
-    description: Attribute.Text;
     image: Attribute.Media;
+    detailedDescription: Attribute.Blocks;
   };
 }
 
