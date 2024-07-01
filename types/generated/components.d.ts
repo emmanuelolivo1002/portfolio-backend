@@ -29,6 +29,7 @@ export interface ComponentsLink extends Schema.Component {
     type: Attribute.Enumeration<['internal', 'external', 'file']> &
       Attribute.Required &
       Attribute.DefaultTo<'internal'>;
+    fileData: Attribute.Media;
   };
 }
 
