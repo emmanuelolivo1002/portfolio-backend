@@ -1,57 +1,32 @@
-# 🚀 Getting started with Strapi
+# Personal Portfolio Backend
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
+![Cover Image of Portfolio. ](https://adminv2.emmanuelolivo.com/uploads/Screenshot_2024_07_08_at_11_17_56_AM_07975abf93.png)
 
-### `develop`
+This is the backend for my personal portfolio, built with Strapi CMS. It uses a SQLite database to manage content and includes webhooks to revalidate the cache on the front end, ensuring the latest content is always displayed.
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
+## Front End
+You can take a look at the [front end repo here](https://github.com/emmanuelolivo1002/portfolio-frontend)
 
-```
-npm run develop
-# or
-yarn develop
-```
 
-### `start`
+## Features
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
+### Content Management
 
-```
-npm run start
-# or
-yarn start
-```
+-   Easily manage and deliver content for projects, experience, about me, and contact sections.
+-   User-friendly interface for adding, editing, and deleting content.
 
-### `build`
+### SQLite Database
 
-Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
+-   Lightweight, file-based database for storing content.
 
-```
-npm run build
-# or
-yarn build
-```
+### Webhooks
 
-## ⚙️ Deployment
+-   Webhooks set up to revalidate the cache on the front end whenever content is updated.
+-   Ensures that the most recent updates are immediately reflected on the website.
 
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
+## Technologies Used
 
-## 📚 Learn more
-
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
-
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
-
-## ✨ Community
-
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
-
----
-
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+-   **Strapi CMS:** Headless CMS to manage and deliver content.
+-   **SQLite:** File-based database system.
+-   **Node.js:** JavaScript runtime environment.
+-   **Webhooks:** Used to trigger cache revalidation on the front end.
