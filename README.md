@@ -1,7 +1,5 @@
 # Personal Portfolio Backend
 
-![Cover Image of Portfolio. ](https://adminv2.emmanuelolivo.com/uploads/Screenshot_2024_07_08_at_11_17_56_AM_e439c5ac3b.png)
-
 This is the backend for my personal portfolio, built with Strapi CMS. It uses a SQLite database to manage content and includes webhooks to revalidate the cache on the front end, ensuring the latest content is always displayed.
 
 ## Front End
